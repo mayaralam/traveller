@@ -170,7 +170,6 @@ export default function traveller() {
                 </svg>
                 <h3 className="text-lg font-bold text-black">Filters</h3>
               </div>
-              {/* Sort */}
               <div className="mb-4">
                 <label className="block text-sm font-medium mb-1 text-black">
                   Sort by
@@ -182,8 +181,6 @@ export default function traveller() {
                   <option>Rating</option>
                 </select>
               </div>
-
-              {/* Price Range */}
               <div className="mb-4">
                 <label className="block text-sm font-medium mb-1 text-black">
                   Price Range
@@ -201,8 +198,6 @@ export default function traveller() {
                   <span>$600</span>
                 </div>
               </div>
-
-              {/* Amenities */}
               <div>
                 <label className="block text-sm font-medium mb-2 text-black">
                   Amenities
@@ -225,15 +220,12 @@ export default function traveller() {
               </div>
             </div>
           </aside>
-
-          {/* كروت الفنادق بالطول */}
           <div className="md:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6">
             {filteredHotels.map((hotel, index) => (
               <div
                 key={index}
                 className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col"
               >
-                {/* صورة الفندق */}
                 <div className="relative group h-66 overflow-hidden">
                   <div className="absolute top-3 right-3 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full z-10">
                     ⭐ {hotel.rating}
@@ -260,8 +252,6 @@ export default function traveller() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ease-in-out"
                   />
                 </div>
-
-                {/* التفاصيل */}
                 <div className="p-5 flex flex-col justify-between h-[40vh]">
                   <div>
                     <h3 className="text-lg font-medium text-gray-900">

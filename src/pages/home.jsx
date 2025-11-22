@@ -229,29 +229,29 @@ export default function home() {
       image: pic6,
     },
   ];
-   const testimonials = [
-  {
-    initials: "SM",
-    name: "Sarah Martinez",
-    location: "New York, USA",
-    quote:
-      "Absolutely incredible experience! The team took care of every detail and our trip to Japan was seamless. The custom itinerary was perfect for our family.",
-  },
-  {
-    initials: "JW",
-    name: "James Wilson",
-    location: "London, UK",
-    quote:
-      "Best travel service I've ever used. From booking to the actual trip, everything was top-notch. The 24/7 support gave us peace of mind throughout our adventure.",
-  },
-  {
-    initials: "FD",
-    name: "Fayrouz Dawood",
-    location: "Singapore",
-    quote:
-      "The guided tours were exceptional! Our local guide in Paris was knowledgeable and made the city come alive. Can't wait to book our next adventure with Wanderlust.",
-  },
-];
+  const testimonials = [
+    {
+      initials: "SM",
+      name: "Sarah Martinez",
+      location: "New York, USA",
+      quote:
+        "Absolutely incredible experience! The team took care of every detail and our trip to Japan was seamless. The custom itinerary was perfect for our family.",
+    },
+    {
+      initials: "JW",
+      name: "James Wilson",
+      location: "London, UK",
+      quote:
+        "Best travel service I've ever used. From booking to the actual trip, everything was top-notch. The 24/7 support gave us peace of mind throughout our adventure.",
+    },
+    {
+      initials: "FD",
+      name: "Fayrouz Dawood",
+      location: "Singapore",
+      quote:
+        "The guided tours were exceptional! Our local guide in Paris was knowledgeable and made the city come alive. Can't wait to book our next adventure with Wanderlust.",
+    },
+  ];
   return (
     <>
       <Nav />
@@ -270,7 +270,6 @@ export default function home() {
           </h6>
 
           <div className="bg-white rounded-xl shadow-md p-6 max-w-4xl mx-auto flex md:flex-row flex-col items-center gap-4 mt-8">
-            {/* <div className="flex gap-4 items-center"> */}
             <div className="flex-1 w-full">
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Destination
@@ -301,17 +300,10 @@ export default function home() {
                 className="text-gray-700 w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
-            {/* </div> */}
-            {/* <div className="flex justify-center"> */}
-            <button
-              
-              className=" cursor-pointer bg-gray-900 text-white px-4 py-2 rounded-lg flex items-center mt-5 gap-2.5 hover:bg-gray-700 transition"
-            >
+            <button className=" cursor-pointer bg-gray-900 text-white px-4 py-2 rounded-lg flex items-center mt-5 gap-2.5 hover:bg-gray-700 transition">
               <FaSearch />
-              {/* <FaRegEye /> */}
               Search Trips
             </button>
-            {/* </div> */}
           </div>
         </div>
       </div>
@@ -356,7 +348,9 @@ export default function home() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
               <h2 className="text-3xl font-bold">
-                <span className="text-gray-900 dark:text-gray-200">Trending </span>
+                <span className="text-gray-900 dark:text-gray-200">
+                  Trending{" "}
+                </span>
                 <span className="bg-gradient-to-br from-[#FF7A00] to-[#FF4D88] bg-clip-text text-transparent">
                   Destinations
                 </span>
@@ -426,47 +420,59 @@ export default function home() {
           ))}
         </section>
 
-    <section className="max-w-7xl mx-auto px-6 py-12">
-      <div className="text-center mb-10">
-        <div className="inline-block bg-gradient-to-br from-[#FF7A00] to-[#FF4D88] text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">
-          Testimonials
-        </div>
-        <div className="flex gap-1.5 justify-center">
-        <h2 className="text-4xl text-gray-900 dark:text-gray-200">What Our</h2>
-        <h2 className="text-4xl text-transparent bg-clip-text bg-gradient-to-br from-[#FF7A00] to-[#FF4D88]">Travelers Say</h2>
-        </div>
-        <p className="text-sm text-gray-600 dark:text-gray-300 mt-2 max-w-xl mx-auto">
-          Don't just take our word for it. Hear from travelers who've experienced the Wanderlust difference.
-        </p>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {testimonials.map((t, index) => (
-          <div key={index} className="bg-white rounded-xl shadow-md p-6 flex flex-col justify-between">
-            <div className="flex gap-1 text-yellow-400 mb-3">
-              {Array(5)
-                .fill(0)
-                .map((_, i) => (
-                  <svg
-                    key={i}
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.966a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 2.46a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.388-2.46a1 1 0 00-1.175 0l-3.388 2.46c-.784.57-1.838-.197-1.539-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.045 9.393c-.783-.57-.38-1.81.588-1.81h4.18a1 1 0 00.95-.69l1.286-3.966z" />
-                  </svg>
-                ))}
+        <section className="max-w-7xl mx-auto px-6 py-12">
+          <div className="text-center mb-10">
+            <div className="inline-block bg-gradient-to-br from-[#FF7A00] to-[#FF4D88] text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">
+              Testimonials
             </div>
-            <p className="text-sm text-gray-700 mb-4">"{t.quote}"</p>
-            <div className="mt-auto">
-              <div className="text-xs bg-gradient-to-br from-[#FF7A00] to-[#FF4D88] text-white w-8 h-8 rounded-full flex items-center justify-center">{t.initials}</div>
-              <div className="text-sm font-semibold text-gray-900">{t.name}</div>
-              <div className="text-xs text-gray-500">{t.location}</div>
+            <div className="flex gap-1.5 justify-center">
+              <h2 className="text-4xl text-gray-900 dark:text-gray-200">
+                What Our
+              </h2>
+              <h2 className="text-4xl text-transparent bg-clip-text bg-gradient-to-br from-[#FF7A00] to-[#FF4D88]">
+                Travelers Say
+              </h2>
             </div>
+            <p className="text-sm text-gray-600 dark:text-gray-300 mt-2 max-w-xl mx-auto">
+              Don't just take our word for it. Hear from travelers who've
+              experienced the Wanderlust difference.
+            </p>
           </div>
-        ))}
-      </div>
-    </section>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {testimonials.map((t, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-xl shadow-md p-6 flex flex-col justify-between"
+              >
+                <div className="flex gap-1 text-yellow-400 mb-3">
+                  {Array(5)
+                    .fill(0)
+                    .map((_, i) => (
+                      <svg
+                        key={i}
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-4 w-4"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.966a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 2.46a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.388-2.46a1 1 0 00-1.175 0l-3.388 2.46c-.784.57-1.838-.197-1.539-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.045 9.393c-.783-.57-.38-1.81.588-1.81h4.18a1 1 0 00.95-.69l1.286-3.966z" />
+                      </svg>
+                    ))}
+                </div>
+                <p className="text-sm text-gray-700 mb-4">"{t.quote}"</p>
+                <div className="mt-auto">
+                  <div className="text-xs bg-gradient-to-br from-[#FF7A00] to-[#FF4D88] text-white w-8 h-8 rounded-full flex items-center justify-center">
+                    {t.initials}
+                  </div>
+                  <div className="text-sm font-semibold text-gray-900">
+                    {t.name}
+                  </div>
+                  <div className="text-xs text-gray-500">{t.location}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
       </div>
       <Footer />
     </>
