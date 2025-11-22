@@ -9,7 +9,7 @@ export default function Login() {
     email: yup
       .string()
       .required("Required")
-      .test("is-valid", "Enter a valid email or phone number", (value) => {
+      .test("is-valid", "Enter a valid email", (value) => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         const phoneRegex = /^[0-9]{10,15}$/;
         return emailRegex.test(value) || phoneRegex.test(value);
